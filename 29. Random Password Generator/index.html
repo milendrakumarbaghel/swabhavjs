@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="head-title">
+        <h1>Password Generator</h1>
+    </div>
+   <div class="container">
+    <div class="central-card">
+        <div class="random-pass">
+            <p id="randomPassword">placeholder</p>
+        </div>
+        <p>Password Length</p>
+        <div class="slider-container">
+            <input type="range" min="12" max="16" value="13" class="slider" id="myRange">
+            <label id="password-slider-length">10</label>
+        </div>
+
+        <div class="checkbox-1 checkbox">
+            <input type="checkbox" name="lower" id="lower"><label for="lower">Include Lowercase</label>
+        </div>
+        <div class="checkbox-2 checkbox">
+            <input type="checkbox" name="upper" id="upper"><label for="upper">Include UpperCase</label>
+        </div>
+        <div class="checkbox-3 checkbox">
+            <input type="checkbox" name="nums" id="nums"><label for="nums">Include Numbers</label>
+        </div>
+        <div class="checkbox-4 checkbox">
+            <input type="checkbox" name="symbols" id="symbols"><label for="symbols">Include symbols</label>
+        </div>
+        <input type="button" value="Generate" class="reload-btn">
+    </div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
