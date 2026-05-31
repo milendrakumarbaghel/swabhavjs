@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: #f6f7fb;
+	color: #1b1b1b;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.lesson {
+	text-align: center;
+	padding: 24px;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+
+.clock-face {
+	font-size: 36px;
+	font-weight: 700;
+	padding: 16px 24px;
+	border: 2px solid #1b1b1b;
+	border-radius: 10px;
+	background: #ffffff;
+	min-width: 220px;
+}

@@ -8,17 +8,17 @@ let students = 30;
 
 // students = students - 1;
 // students = students + 1;
-//students = students * 2;
+// students = students * 2;
 // students = students / 2;
 // students = students ** 2;
 // students = students % 2;
 
 // students -= 1;
 // students += 1;
-//students += 2;
+// students += 2;
 // students /= 2;
 // students **= 2;
-// students %= 2;
+// students %= 4;
 
 // students += 1;
 // students -= 1;
@@ -26,10 +26,10 @@ let students = 30;
 // students /= 2;
 // students %= 3;
 
-//students++;
-//students--;
+// students++;
+// students--;
 
-// console.log(students);
+console.log(students);
 
 /*
 operators precedence
@@ -50,7 +50,7 @@ operators precedence
 // // (12 % 5) + (8 / 2); // 2 + 4 = 6
 
 // equation 3
-let result = 6 / 2 ** (2+5); // 6 / 2 ** 7;
+// let result = 6 / 2 ** (2+5); // 6 / 2 ** 7;
 // // 6 / 128 = 0.046875
 
-console.log(result);
+// console.log(result);

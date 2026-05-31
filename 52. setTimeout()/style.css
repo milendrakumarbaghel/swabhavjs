@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: #f6f7fb;
+	color: #1b1b1b;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.lesson {
+	text-align: center;
+	padding: 24px;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.note {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 16px;
+}
+
+.controls {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 12px;
+}
+
+button {
+	padding: 10px 16px;
+	border: 2px solid #1b1b1b;
+	background: #fff;
+	border-radius: 8px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.status {
+	font-weight: 600;
+	padding: 10px 14px;
+	border: 2px dashed #1b1b1b;
+	border-radius: 8px;
+	min-width: 220px;
+	background: #fff;
+}
