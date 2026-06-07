@@ -1,25 +1,36 @@
 // this =   reference to a particular object
 //          the reference depends on the immediate context
 
-const car1 = {
-    model:"Mustang",
-    color: "red",
-    year: "2023",
+// this in Global Context
+console.log(this);
 
-    drive : function(){
-        console.log(`You drive the ${this.model}`);
-    }
+//     In browser → window
+//     In Node → {} (module scope)
+
+
+// this Inside an Object Method
+const person = {
+  name: "Milendra",
+  greet: function () {
+    console.log(this.name);
+  }
+};
+// Here this refers to the object that is calling the function.
+
+person.greet(); // Milendra
+
+// this Inside a Regular Function
+function show() {
+  console.log(this);
 }
 
-const car2 = {
-    model:"Corvette",
-    color: "blue",
-    year: "2024",
+show();
 
-    drive : function(){
-        console.log(`You drive the ${this.model}`);
-    }
-}
 
-car1.drive();
-car2.drive();
+// Simple Mental Model (before your brain melts)
+
+// * Object method → this = object
+// * Regular function → this = window / undefined
+// * Arrow function → this = inherited
+// * Event handler → this = element
+// * Detached function → this = lost soul

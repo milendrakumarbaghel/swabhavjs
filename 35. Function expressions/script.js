@@ -1,41 +1,40 @@
-// function expression =    function without a name (anonymous function)
-//                          avoid polluting the global scope with names
-//                          Write it, then forget about it
+// function expression -> function without a name (anonymous function)
+// avoid polluting the global scope with names
+// write it, then forget about it
 
-// sayHello();
+const greet = function () {
+  console.log("Hello");
+};
 
-// function sayHello(){
-//     console.log("Hello!");
-// }
+greet();
 
-// const greeting = function(){
-//     console.log("Hello!");
-// }
+// Function with Parameters
+const add = function (a, b) {
+  return a + b;
+};
 
-// greeting();
+console.log(add(2, 3)); // 5
 
-/*
-let count = 0;
+// IIFE = Immediately Invoked Function Expression
+(function () {
+  console.log("I run immediately");
+})();
 
-function incraseCount(){
-    count+=1;
-    document.getElementById("myLabel").innerHTML = count;
-}
+// Anonymous Function as Callback
+setTimeout(function () {
+  console.log("Executed after 2 seconds");
+}, 2000);
 
-function decraseCount(){
-    count-=1;
-    document.getElementById("myLabel").innerHTML = count;
-}
-*/
+// In Array Methods
+const numbers = [1, 2, 3, 4];
 
-let count = 0;
+const squares = numbers.map(function (num) {
+  return num * num;
+});
 
-document.getElementById("increaseButton").onclick = function(){
-    count += 1;
-    document.getElementById("myLabel").innerHTML = count;
-}
+console.log(squares); // [1, 4, 9, 16]
 
-document.getElementById("decreaseButton").onclick = function(){
-    count -= 1;
-    document.getElementById("myLabel").innerHTML = count;
-}
+//Arrow Function (Modern Anonymous Function)
+const multiply = (a, b) => a * b;
+
+console.log(multiply(3, 4)); // 12

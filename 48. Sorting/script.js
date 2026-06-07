@@ -29,3 +29,38 @@ const byMarks = [...students].sort((a, b) => b.marks - a.marks);
 
 console.log("Students (name):", byName);
 console.log("Students (marks):", byMarks);
+
+
+
+// let grades = [100, 50, 90, 60, 80, 70];
+
+// grades = grades.sort(ascendingSort);
+// grades.forEach(print);
+
+// function descendingSort(x, y){
+//     return y -x;
+// }
+
+function ascendingSort(x, y){
+    return x - y;
+}
+
+function print(element){
+    console.log(element)
+}
+// let grades = [100, 50, 90, 60, 80, 70];
+
+// grades = grades.sort(ascendingSort);
+// grades.forEach(print);
+
+// // function descendingSort(x, y){
+// //     return y -x;
+// // }
+
+// function ascendingSort(x, y){
+//     return x - y;
+// }
+
+// function print(element){
+//     console.log(element)
+// }

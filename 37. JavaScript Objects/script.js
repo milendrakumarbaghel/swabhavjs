@@ -12,7 +12,7 @@ const car1 = {
         console.log("You drive the car");
     },
 
-    brake : function(){
+    break : function(){
         console.log("You step on the brakes");
     }
 }
@@ -26,7 +26,7 @@ const car2 = {
         console.log("You drive the car");
     },
 
-    brake : function(){
+    break : function(){
         console.log("You step on the brakes");
     }
 }
@@ -36,11 +36,11 @@ console.log(car1.color);
 console.log(car1.year);
 
 car1.drive();
-car1.brake();
+car1.break();
 
 console.log(car2.model);
 console.log(car2.color);
 console.log(car2.year);
 
 car2.drive();
-car2.brake();
+car2.break();
