@@ -3,12 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>68. Rock Paper Scissors 👊</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="lesson">
-        <h1>68. Rock Paper Scissors 👊</h1>
+    <main class="game-app">
+        <section class="game" aria-label="Rock Paper Scissors game">
+            <div class="game-header">
+                <h1>Rock Paper Scissors</h1>
+                <button class="reset-button" type="button" id="resetButton">Reset</button>
+            </div>
+
+            <div class="scoreboard" aria-label="Scoreboard">
+                <div class="score-card">
+                    <span class="score-label">You</span>
+                    <strong id="playerScore">0</strong>
+                </div>
+                <div class="score-card">
+                    <span class="score-label">Draws</span>
+                    <strong id="drawScore">0</strong>
+                </div>
+                <div class="score-card">
+                    <span class="score-label">Computer</span>
+                    <strong id="computerScore">0</strong>
+                </div>
+            </div>
+
+            <div class="arena" aria-live="polite">
+                <div class="choice-panel">
+                    <span class="panel-label">Your Pick</span>
+                    <span class="choice-symbol" id="playerChoice">?</span>
+                </div>
+                <div class="result-panel">
+                    <p id="resultText">Choose your move</p>
+                    <span id="roundText">First to think fast wins.</span>
+                </div>
+                <div class="choice-panel">
+                    <span class="panel-label">Computer</span>
+                    <span class="choice-symbol" id="computerChoice">?</span>
+                </div>
+            </div>
+
+            <div class="choices" aria-label="Choose your move">
+                <button class="choice-button" type="button" data-choice="rock" aria-label="Choose rock">
+                    <span class="choice-icon">Rock</span>
+                </button>
+                <button class="choice-button" type="button" data-choice="paper" aria-label="Choose paper">
+                    <span class="choice-icon">Paper</span>
+                </button>
+                <button class="choice-button" type="button" data-choice="scissors" aria-label="Choose scissors">
+                    <span class="choice-icon">Scissors</span>
+                </button>
+            </div>
+
+            <ol class="history" id="historyList" aria-label="Round history"></ol>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>

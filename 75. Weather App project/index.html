@@ -3,12 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>75. Weather App project ☀️</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="lesson">
-        <h1>75. Weather App project ☀️</h1>
+    <main class="weather-app">
+        <section class="weather-shell" aria-label="Weather application">
+            <div class="app-header">
+                <div>
+                    <p class="eyebrow">Live forecast</p>
+                    <h1>Weather App</h1>
+                </div>
+                <button class="location-button" type="button" id="locationButton">Use My Location</button>
+            </div>
+
+            <form class="search-form" id="searchForm">
+                <label class="visually-hidden" for="cityInput">Search for a city</label>
+                <input id="cityInput" type="search" placeholder="Search city, state, or country" autocomplete="off" required>
+                <button type="submit">Search</button>
+            </form>
+
+            <p class="status" id="statusMessage" role="status"></p>
+
+            <section class="current-weather" id="currentWeather" aria-live="polite">
+                <div>
+                    <p class="location-name" id="locationName">Search for a city</p>
+                    <p class="updated-time" id="updatedTime">Current weather will appear here.</p>
+                </div>
+                <div class="temperature-block">
+                    <span class="weather-symbol" id="weatherSymbol">--</span>
+                    <strong id="currentTemp">--</strong>
+                </div>
+                <p class="condition" id="conditionText">No forecast loaded yet.</p>
+            </section>
+
+            <section class="details-grid" aria-label="Weather details">
+                <article class="detail-card">
+                    <span>Feels Like</span>
+                    <strong id="feelsLike">--</strong>
+                </article>
+                <article class="detail-card">
+                    <span>Humidity</span>
+                    <strong id="humidity">--</strong>
+                </article>
+                <article class="detail-card">
+                    <span>Wind</span>
+                    <strong id="windSpeed">--</strong>
+                </article>
+                <article class="detail-card">
+                    <span>Rain Chance</span>
+                    <strong id="rainChance">--</strong>
+                </article>
+            </section>
+
+            <section class="forecast-section" aria-label="Five day forecast">
+                <div class="section-heading">
+                    <h2>5-Day Forecast</h2>
+                    <span id="forecastUnit">Celsius</span>
+                </div>
+                <div class="forecast-grid" id="forecastGrid"></div>
+            </section>
+
+            <section class="recent-section" aria-label="Recent searches">
+                <h2>Recent Searches</h2>
+                <div class="recent-list" id="recentList"></div>
+            </section>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
