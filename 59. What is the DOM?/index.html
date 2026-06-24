@@ -7,9 +7,121 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <main class="lesson">
         <h1>59. What is the DOM? 🌳</h1>
+        <p class="intro">
+            The <strong>DOM (Document Object Model)</strong> is a tree-like
+            representation of a web page created by the browser. JavaScript can
+            read and change this tree, which is how we make pages interactive.
+        </p>
+
+        <!-- ─── Section 1: The document Object ─── -->
+        <section id="section-document" class="card">
+            <h2>1. The <code>document</code> Object</h2>
+            <p>
+                <code>document</code> is the root of the DOM tree. Open the
+                console (<kbd>F12</kbd>) to see what gets logged.
+            </p>
+            <button id="btnLogDocument" type="button">Log document</button>
+            <pre id="outputDocument" class="output"></pre>
+        </section>
+
+        <!-- ─── Section 2: Selecting Elements ─── -->
+        <section id="section-selectors" class="card">
+            <h2>2. Selecting Elements</h2>
+            <p>Use these methods to grab elements from the DOM:</p>
+
+            <ul class="demo-list">
+                <li id="item-one" class="fruit">🍎 Apple</li>
+                <li id="item-two" class="fruit">🍌 Banana</li>
+                <li id="item-three" class="fruit">🍇 Grape</li>
+                <li id="item-four" class="veggie">🥕 Carrot</li>
+            </ul>
+
+            <div class="btn-group">
+                <button id="btnById" type="button">getElementById</button>
+                <button id="btnByClass" type="button">getElementsByClassName</button>
+                <button id="btnQuerySelector" type="button">querySelector</button>
+                <button id="btnQueryAll" type="button">querySelectorAll</button>
+            </div>
+            <pre id="outputSelectors" class="output"></pre>
+        </section>
+
+        <!-- ─── Section 3: Changing Content & Attributes ─── -->
+        <section id="section-modify" class="card">
+            <h2>3. Changing Content &amp; Attributes</h2>
+
+            <p id="modifyTarget">This paragraph will be modified ✏️</p>
+            <img id="demoImage" src="https://via.placeholder.com/120x80?text=Old" alt="demo" width="120" height="80">
+
+            <div class="btn-group">
+                <button id="btnTextContent" type="button">textContent</button>
+                <button id="btnInnerHTML" type="button">innerHTML</button>
+                <button id="btnAttribute" type="button">Change src</button>
+                <button id="btnStyle" type="button">Change style</button>
+                <button id="btnResetModify" type="button">Reset</button>
+            </div>
+            <pre id="outputModify" class="output"></pre>
+        </section>
+
+        <!-- ─── Section 4: DOM Traversal ─── -->
+        <section id="section-traversal" class="card">
+            <h2>4. DOM Traversal</h2>
+            <p>Navigate between parent, child, and sibling nodes.</p>
+
+            <div id="family">
+                <p id="eldest">Eldest Child</p>
+                <p id="middle">Middle Child</p>
+                <p id="youngest">Youngest Child</p>
+            </div>
+
+            <div class="btn-group">
+                <button id="btnParent" type="button">parentElement</button>
+                <button id="btnChildren" type="button">children</button>
+                <button id="btnFirstChild" type="button">firstElementChild</button>
+                <button id="btnNextSibling" type="button">nextElementSibling</button>
+            </div>
+            <pre id="outputTraversal" class="output"></pre>
+        </section>
+
+        <!-- ─── Section 5: Creating & Removing Elements ─── -->
+        <section id="section-create" class="card">
+            <h2>5. Creating &amp; Removing Elements</h2>
+
+            <ul id="todoList">
+                <li>Learn HTML ✅</li>
+                <li>Learn CSS ✅</li>
+                <li>Learn JavaScript 🚀</li>
+            </ul>
+
+            <div class="btn-group">
+                <button id="btnAdd" type="button">Add Item</button>
+                <button id="btnRemoveLast" type="button">Remove Last</button>
+                <button id="btnInsertBefore" type="button">Insert at Top</button>
+            </div>
+            <pre id="outputCreate" class="output"></pre>
+        </section>
+
+        <!-- ─── Section 6: Event Listeners ─── -->
+        <section id="section-events" class="card">
+            <h2>6. Event Listeners</h2>
+
+            <div id="eventBox" tabindex="0">
+                Hover, click, or type here!
+            </div>
+            <pre id="outputEvents" class="output"></pre>
+        </section>
+
+        <!-- ─── Section 7: DOM Tree Visualizer ─── -->
+        <section id="section-tree" class="card">
+            <h2>7. DOM Tree Visualizer</h2>
+            <p>Click the button to see a simplified DOM tree of this page.</p>
+            <button id="btnShowTree" type="button">Show DOM Tree</button>
+            <pre id="outputTree" class="output tree-output"></pre>
+        </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>

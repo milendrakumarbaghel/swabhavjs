@@ -1,0 +1,297 @@
+/* ============================================================
+   59. What is the DOM? 🌳  — style.css
+   ============================================================ */
+
+/* ─── Base Reset & Typography ─── */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-bg: #0f172a;
+    --clr-surface: #1e293b;
+    --clr-surface-hover: #334155;
+    --clr-border: #334155;
+    --clr-text: #e2e8f0;
+    --clr-text-muted: #94a3b8;
+    --clr-heading: #f8fafc;
+    --clr-accent: #38bdf8;
+    --clr-accent-hover: #7dd3fc;
+    --clr-green: #4ade80;
+    --clr-orange: #fb923c;
+    --clr-pink: #f472b6;
+    --clr-code-bg: #0f172a;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ─── Layout ─── */
+.lesson {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--clr-heading);
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    color: var(--clr-text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ─── Cards ─── */
+.card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.75rem;
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s;
+}
+
+.card:hover {
+    border-color: var(--clr-accent);
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    color: var(--clr-accent);
+    margin-bottom: 0.75rem;
+}
+
+.card h2 code {
+    background: var(--clr-code-bg);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+.card p {
+    margin-bottom: 0.75rem;
+}
+
+/* ─── Buttons ─── */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+button {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    color: #0f172a;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+    opacity: 0.85;
+}
+
+/* ─── Output Boxes ─── */
+.output {
+    background: var(--clr-code-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-top: 0.75rem;
+    font-family: "Fira Code", "Cascadia Code", monospace;
+    font-size: 0.8rem;
+    color: var(--clr-green);
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 260px;
+    overflow-y: auto;
+    min-height: 2.5rem;
+}
+
+.tree-output {
+    max-height: 400px;
+    font-size: 0.75rem;
+}
+
+/* ─── Demo List ─── */
+.demo-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.demo-list li {
+    background: var(--clr-code-bg);
+    padding: 0.4rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid var(--clr-border);
+    font-size: 0.9rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.demo-list li.highlight {
+    background: #38bdf822;
+    border-color: var(--clr-accent);
+    transform: scale(1.05);
+}
+
+/* ─── Todo List (Section 5) ─── */
+#todoList {
+    list-style: none;
+    margin-bottom: 0.75rem;
+}
+
+#todoList li {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--clr-border);
+    font-size: 0.95rem;
+    animation: fadeSlideIn 0.3s ease;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ─── Event Box (Section 6) ─── */
+#eventBox {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    border: 2px dashed var(--clr-accent);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--clr-text-muted);
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, transform 0.2s;
+    user-select: none;
+    outline: none;
+}
+
+#eventBox:hover {
+    background: linear-gradient(135deg, #334155, #475569);
+    border-color: var(--clr-pink);
+    color: var(--clr-heading);
+}
+
+#eventBox:active {
+    transform: scale(0.97);
+}
+
+/* ─── Demo Image ─── */
+#demoImage {
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--clr-border);
+    margin-bottom: 0.5rem;
+}
+
+/* ─── Family Div (Section 4) ─── */
+#family {
+    background: var(--clr-code-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+}
+
+#family p {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--clr-border);
+    margin-bottom: 0;
+}
+
+#family p:last-child {
+    border-bottom: none;
+}
+
+#family p.highlight-traversal {
+    background: #38bdf822;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+}
+
+/* ─── kbd ─── */
+kbd {
+    background: var(--clr-surface-hover);
+    border: 1px solid var(--clr-border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.8rem;
+    font-family: inherit;
+}
+
+/* ─── Code inline ─── */
+code {
+    color: var(--clr-accent);
+}
+
+/* ─── Scrollbar ─── */
+.output::-webkit-scrollbar {
+    width: 6px;
+}
+
+.output::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.output::-webkit-scrollbar-thumb {
+    background: var(--clr-surface-hover);
+    border-radius: 3px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 520px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.75rem;
+    }
+}
